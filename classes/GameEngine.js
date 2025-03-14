@@ -59,7 +59,7 @@ class GameEngine {
 					this.computerDiceSetIndex = FairRandomGenerator.generateRandomNumber(availableChoices - 1);
 				}
 				computerFirst === false
-					? console.log(`I choose the [${this.diceSets[this.computerDiceSetIndex].dice}]. dice`)
+					? console.log(`I choose the [${this.diceSets[this.computerDiceSetIndex].dice}] dice.`)
 					: "";
 				break;
 			}
