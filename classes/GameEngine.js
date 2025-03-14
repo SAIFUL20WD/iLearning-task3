@@ -54,13 +54,13 @@ class GameEngine {
 				this.userDiceSetindex !== this.computerDiceSetIndex
 			) {
 				console.log(`You choose the [${this.diceSets[this.userDiceSetindex].dice}] dice.`);
-				this.computerDiceSetIndex = FairRandomGenerator.generateRandomNumber(availableChoices - 1);
-				while (this.computerDiceSetIndex === this.userDiceSetindex) {
+				if (!computerFirst) {
 					this.computerDiceSetIndex = FairRandomGenerator.generateRandomNumber(availableChoices - 1);
+					while (this.computerDiceSetIndex === this.userDiceSetindex) {
+						this.computerDiceSetIndex = FairRandomGenerator.generateRandomNumber(availableChoices - 1);
+					}
+					console.log(`I choose the [${this.diceSets[this.computerDiceSetIndex].dice}] dice.`);
 				}
-				computerFirst === false
-					? console.log(`I choose the [${this.diceSets[this.computerDiceSetIndex].dice}] dice.`)
-					: "";
 				break;
 			}
 
