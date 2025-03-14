@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "readline-sync": "^1.4.10",
+    "table": "^6.9.0"
+  }
+}
